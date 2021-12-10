@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <base target="_top">
+    <style>
+
+      h1 {
+        color: green;
+        font-family: verdana;
+        font-size: 300%;
+      }
+
+    </style
+  </head>
+
+  <body>
+    <h1>UnBlockGithub Console</h1>
+    <button type="button" onclick="google.script.run.forceStart();">Backup Now</button>
+
+    <script>
+      function onSuccess(email) {
+        var div = document.getElementById('isAdmin');
+        div.innerHTML = 'Is admin status = ' + email
+      }
+
+    google.script.run.withSuccessHandler(onSuccess)
+          .checkIfAdmin();
+    </script>
+
+    <div id="isAdmin"></div>
+  </body>
+  
+</html>
