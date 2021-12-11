@@ -42,7 +42,7 @@ function copyFolder(source, target) {
 }
 
 function doGet() {
-  return HtmlService.createHtmlOutputFromFile('Index');
+  return HtmlService.createHtmlOutputFromFile('index');
 }
 
 function forceStart() {
