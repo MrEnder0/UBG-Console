@@ -19,12 +19,11 @@
     <h1>Secret Test</h1>
 
     <script>
-      function returnSecret() {
-        javascript:getSecret(secret);
+      returnsSecret = function javascript:getSecret(secret) {
         var div = document.getElementById('outputText');
         div.innerHTML = 'The secret is: ' + secret
       }
-      returnSecret()
+      returnSecret();
     </script>
 
     <div id="outputText"></div>
