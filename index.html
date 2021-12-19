@@ -3,6 +3,7 @@
 
   <head>
     <base target="_top">
+    <script src="Code.js"></script>
     <style>
 
       h1 {
@@ -16,19 +17,16 @@
 
   <body>
     <h1>UnBlockGithub Console</h1>
-    <button type="button" onclick="google.script.run.forceStart();">Backup Now</button>
 
     <script>
-      function onSuccess(email) {
-        var div = document.getElementById('isAdmin');
-        div.innerHTML = 'Is admin status = ' + email
+      function returnSecret(secret) {
+        var div = document.getElementById('outputText');
+        div.innerHTML = 'The secret is ' + secret
       }
-
-    google.script.run.withSuccessHandler(onSuccess)
-          .checkIfAdmin();
+      fun
     </script>
 
-    <div id="isAdmin"></div>
+    <div id="outputText"></div>
   </body>
   
 </html>
