@@ -54,8 +54,6 @@ function checkIfAdmin() {
   const admins = ["censored@gmail.com", "censored@gmail.com", "censored@gmail.com", "censored@gmail.com"];
   var email = Session.getActiveUser().getEmail();
 
-  return environment.admin_email_1
-
   if(admins.includes(email)) {
     return "True";
   } else {
