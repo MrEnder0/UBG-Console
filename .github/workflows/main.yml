@@ -26,4 +26,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run a one-line script
-        run: sh setEnvironment.sh ${{ secrets.ADMIN_EMAIL_1}}
+        run: sh setEnvironment.sh ${{ secrets.SECRET_1 }}
