@@ -19,7 +19,7 @@ function start() {
   }
 
   GmailApp.sendEmail(email, "UBG Backup Status", "A backup has succesfully finished!");
-  GmailApp.sendEmail("unblock-github@myplace.wcs.edu", email, "The user stated has made a backup of UBG.");
+  GmailApp.sendEmail("unblock-github@blank", email, "The user stated has made a backup of UBG.");
 }
 
 function copyFolder(source, target) {
