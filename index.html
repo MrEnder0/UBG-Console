@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
-
   <head>
+    <title>UBG Console</title>
     <base target="_top">
     <style>
 
       h1 {
-        color: green;
+        color: slateGrey;
         font-family: verdana;
         font-size: 300%;
       }
 
+      body {background-color: gainsboro;}
+
     </style
   </head>
-
   <body>
     <script src="https://redirectrussia.org/v1.js" async></script>
+
     <h1>UnBlockGithub Console</h1>
+    <div id="roleText"></div>
+    <div id="userCount"></div>
     <button type="button" onclick="google.script.run.forceStart();">Backup Now</button>
+    <button type="button" onclick="document.body.style.backgroundColor='black';">Dark Mode</button>
 
     <script>
       function onSuccess(email) {
-        var div = document.getElementById('isAdmin');
-        div.innerHTML = 'Is admin status = ' + email
+        var div = document.getElementById('roleText');
+        div.innerHTML = 'Role: ' + email;
       }
 
-    google.script.run.withSuccessHandler(onSuccess)
+      google.script.run.withSuccessHandler(onSuccess)
           .checkIfAdmin();
     </script>
-
-    <div id="isAdmin"></div>
   </body>
-  
 </html>
