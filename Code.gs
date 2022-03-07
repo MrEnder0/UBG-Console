@@ -19,7 +19,7 @@ function start() {
   }
 
   GmailApp.sendEmail(email, "UBG Backup Status", "A backup has succesfully finished!");
-  GmailApp.sendEmail("censored@gmail.com", email, "The user stated has made a backup of UBG.");
+  GmailApp.sendEmail("unblock-github@myplace.wcs.edu", email, "The user stated has made a backup of UBG.");
 }
 
 function copyFolder(source, target) {
@@ -42,21 +42,28 @@ function copyFolder(source, target) {
 }
 
 function doGet() {
-  return HtmlService.createHtmlOutputFromFile('index');
+  return HtmlService.createHtmlOutputFromFile('Index');
 }
 
 function forceStart() {
   alert("Started backup this may take 20 mins.");
   start();
+  //getStorageUsed()
 }
 
 function checkIfAdmin() {
-  const admins = ["censored@gmail.com", "censored@gmail.com", "censored@gmail.com", "censored@gmail.com"];
+  const admins = ["blank@gmail.com", "blank@gmail.com", "blank@gmail.com", "blank@gmail.com"];
   var email = Session.getActiveUser().getEmail();
 
   if(admins.includes(email)) {
-    return "True";
+    return "Admin";
   } else {
-    return "False";
+    return "User";
   }
+}
+
+function getStorageSize() {
+  var folder = DriveApp.getFoldersByName("#UnblockGithub");
+  used = getSize("#UnblockGithub")
+  return used;
 }
